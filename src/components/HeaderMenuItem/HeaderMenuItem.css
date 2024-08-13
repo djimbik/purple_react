@@ -1,0 +1,22 @@
+.header-menu__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: #a8aebf;
+    transition: color 0.3s ease;
+}
+
+.header-menu__link--active {
+    color: #fff;
+}
+
+.header-menu__link:hover {
+    color: #96f6d4;
+}
