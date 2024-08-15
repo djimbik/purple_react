@@ -3,8 +3,8 @@ import Header from '../layouts/Header/Header.jsx';
 import Title from '../components/Title/Title.jsx';
 import Paragraph from '../components/Paragraph/Paragraph.jsx';
 import SearchForm from '../components/SearchForm/SearchForm.jsx';
-import FilmItem from '../components/FilmItem/FilmItem.jsx';
 import Films from '../components/Films/Films.jsx';
+import EnterForm from '../components/EnterForm/EnterForm.jsx';
 
 const INITIAL_STATE = [
   {

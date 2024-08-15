@@ -1,9 +1,19 @@
-import './Input.css';
+import styles from './Input.module.css';
+import classNames from 'classnames/bind';
+import { forwardRef } from 'react';
 
-const Input = ({ isSearch, text, value, onChange, name }) => {
+const cx = classNames.bind(styles);
+
+const Input = forwardRef(({ isSearch, text, value, onChange, name }, ref) => {
+  const inputStyles = cx({
+    input: true,
+    'search-input': isSearch,
+  });
+
   return (
     <input
-      className={`input ${isSearch ? 'search-input' : ''}`}
+      ref={ref}
+      className={inputStyles}
       value={value}
       onChange={onChange}
       type="text"
@@ -11,6 +21,6 @@ const Input = ({ isSearch, text, value, onChange, name }) => {
       name={name}
     />
   );
-};
+});
 
 export default Input;
