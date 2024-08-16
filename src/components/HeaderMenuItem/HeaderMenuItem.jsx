@@ -1,10 +1,18 @@
 import React from 'react';
-import './HeaderMenuItem.css';
+import styles from './HeaderMenuItem.module.css';
+import classNames from 'classnames/bind';
 
-const HeaderMenuItem = ({ children, isActive, icon }) => {
+const cx = classNames.bind(styles);
+
+const HeaderMenuItem = ({ children, isActive, icon, onClick }) => {
+  const linkClass = cx({
+    'header-menu__link': true,
+    'header-menu__link--active': isActive,
+  });
+
   return (
     <li>
-      <a href="#" className={`header-menu__link ${isActive ? 'header-menu__link--active' : ''} `}>
+      <a onClick={onClick} href="#" className={linkClass}>
         {children}
         {icon}
       </a>

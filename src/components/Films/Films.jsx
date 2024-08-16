@@ -1,10 +1,10 @@
 import React from 'react';
 import FilmItem from '../FilmItem/FilmItem.jsx';
-import './Films.css';
+import styles from './Films.module.css';
 
 const Films = ({ films }) => {
   return (
-    <ul className="film-list">
+    <ul className={styles['film-list']}>
       {films.map((film) => (
         <li key={film.title}>
           <FilmItem {...film} />

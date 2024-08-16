@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Input from '../Input/Input.jsx';
 import Button from '../Button/Button.jsx';
-import './SearchForm.css';
+import styles from './SearchForm.module.css';
 
 const SearchForm = () => {
   const [inputValue, setInputValue] = useState('');
+  const searchRef = useRef();
 
   const inputChange = (e) => {
     setInputValue(e.target.value);
@@ -18,8 +19,9 @@ const SearchForm = () => {
   };
 
   return (
-    <form className="input-wrapper" onSubmit={searchHandler}>
+    <form className={styles['input-wrapper']} onSubmit={searchHandler}>
       <Input
+        ref={searchRef}
         isSearch={true}
         text={'Введите название'}
         value={inputValue}

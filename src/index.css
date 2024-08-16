@@ -4,9 +4,10 @@
   font-weight: 400;
 
   background: #121829;
-
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }

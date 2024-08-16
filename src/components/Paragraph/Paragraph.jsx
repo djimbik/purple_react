@@ -1,9 +1,9 @@
 import React from 'react';
-import './Paragraph.css';
+import styles from './Paragraph.module.css';
 
 const Paragraph = ({ text, fontSize }) => {
   return (
-    <p style={{ fontSize: fontSize }} className="p">
+    <p style={{ fontSize: fontSize }} className={styles.p}>
       {text}
     </p>
   );
